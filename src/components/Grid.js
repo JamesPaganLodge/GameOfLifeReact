@@ -1,18 +1,32 @@
 import React, {Component} from 'react'
+import '../grid.css'
 
 class Grid extends Component {
-    constructor() {
-        super()
-        this.state = {}
+  constructor() {
+    super()
+
+    this.state = {}
+  }
+
+  render() {
+    const width = this.props.cols * 14
+    let rowsArr = []
+    let boxClass = ""
+
+    for (let i = 0; i < this.props.rows; i++) {
+      for (let j = 0; j < this.props.cols; j++) {
+        let boxId = i + "_" + j
+
+        boxClass = this.props.gridFull[i][j] ? "box on" : "box off"
+      }
     }
 
-    render() {
-        return(
-            <div>
-                <p>Im in the grid</p>
-            </div>
-        )
-    }
+    return(
+      <div className="grid" style={{width: width}}>
+        {{rowsArr}}
+      </div>
+    )
+  }
 }
 
 export default Grid
