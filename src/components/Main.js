@@ -23,6 +23,19 @@ class Main extends React.Component {
     })
   }
 
+  seed = () => {
+    let gridCopy = arrayClone(this.state.gridFull)
+
+    for (let i = 0; i < this.state.rows; i++) {
+      for (let j = 0; j < this.state.cols; j++) {
+
+        if (Math.floor(Math.random() * 4 === 1)) {
+          gridCopy[i][j] = true
+        }
+      }
+    }
+  }
+
   render() {
     return(
       <div>
