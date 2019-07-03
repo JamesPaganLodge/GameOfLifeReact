@@ -26,7 +26,7 @@ class Grid extends Component {
             boxId={boxId}
             row={i}
             col={j}
-            selectBox={}
+            selectBox={this.props.selectBox}
           />
         )
       }
