@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Box from './Box'
 import '../grid.css'
 
 class Grid extends Component {
@@ -18,6 +19,16 @@ class Grid extends Component {
         let boxId = i + "_" + j
 
         boxClass = this.props.gridFull[i][j] ? "box on" : "box off"
+        rowsArr.push(
+          <Box
+            boxClass={boxClass}
+            key={boxId}
+            boxId={boxId}
+            row={i}
+            col={j}
+            selectBox={}
+          />
+        )
       }
     }
 
