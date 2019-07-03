@@ -7,11 +7,17 @@ class Box extends Component {
     this.state = {}
   }
 
+  selectBox = () => {
+    this.props.selectBox(this.props.row, this.props.col)
+  }
+
   render() {
     return(
-      <div>
-        BOX
-      </div>
+      <div
+        className={this.props.boxClass}
+        id={this.props.boxId}
+        onClick={this.selectBox}
+      />
     )
   }
 }
