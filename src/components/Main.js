@@ -22,6 +22,7 @@ class Main extends React.Component {
           gridFull={this.state.gridFull}
           rows={this.rows}
           cols={this.cols}
+          selectBox={this.selectBox}
         />
         <h2>Generations: {this.state.generation}</h2>
       </div>
