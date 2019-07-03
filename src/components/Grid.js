@@ -14,8 +14,8 @@ class Grid extends Component {
     let rowsArr = []
     let boxClass = ""
 
-    for (var i = 0; i < this.props.rows; i++) {
-      for (var j = 0; j < this.props.cols; j++) {
+    for (let i = 0; i < this.props.rows; i++) {
+      for (let j = 0; j < this.props.cols; j++) {
         let boxId = i + "_" + j
 
         boxClass = this.props.gridFull[i][j] ? "box on" : "box off"
